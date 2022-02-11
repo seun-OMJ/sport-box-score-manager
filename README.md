@@ -10,29 +10,6 @@ Since the application is for keeping records, some sports will be added and the 
 Unlike other bookkeeping apps, our apps will help users keep the games and scores more organised by being game specific. 
 The benefit of using our application over others is that with ours, it is built to specialize in what it does so there are features that make it best suited towards sports and score keeping activities such as being able to keep scores over multiple events, being able to create add and edit teams,being able to pick desired sport Since different sports have different Scoring systems. Users will also be able to start and stop the timers for sports that have the feature implemented.
 
-The application will be considered successful if far all the sports available, the users are able to navigate the application Use it for its intended Purpose which is to keep scores
+# Success Criteria
 
-## Features
-- Users should be able to create the teams and name them
-- Users should be able to change(Add/subtract) scores
-- Users should be able to pick their sports
-- Users should be able to reset the score
-- Users should be able to change background colour of the teams
-- Users should be able to save progress 
-- Users should be able to start and stop timers
-- Users should be able to add/remove/name players in their teams
-- Users should be able to flip a coin
-- Users should be able to view history of the previous games and scores
-- Users should be able to create and play in tournaments
-
-## User Stories
-- As a user, I need to be able to create, add, and customise a team’s name, colour.
-- As a user, I need to be able to add and subtract scores during a game, because we need to accurately track the game's progress.
-- As a user, I need to be able to pick a sport, because not all sports have the same scoring system.
-- As a user, I need to be able to save a game’s progress and continue the game some other time.
-- As a user, I need to be able to reset a game’s progress.
-- As a user, I need to be able to pause a game for timeouts and then resume.
-- As a user, I need to be able to add different players into the game, because I need to track each individual’s performance.
-- As a user, I need the app to decide which team gets the first possession.
-- As a user, I need to be able to archive and view all of my past games.
-
+The application will be considered successful if far all the sports available, the users are able to navigate the application Use it for its intended purpose which is to keep scores.
