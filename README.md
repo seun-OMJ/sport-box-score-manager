@@ -22,3 +22,4 @@ This application will be considered successful based on the following criterias:
 - Improve the users' game
 
 First, for all the sports available, the users are able to navigate the application and use it for its intended purpose which is to keep scores. Second, users give back positive reviews and make this application their primary scoring tracker whenever they partake in a sports activity and make this application a recommendation to other potential users. Third, users accurately track each player’s performance and improve on certain aspects of their performance.
+
