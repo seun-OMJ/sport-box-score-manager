@@ -5,6 +5,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -41,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+                EditText GameName= (EditText) findViewById(R.id.editTextTextPersonName3);
+                TextView result= (TextView) findViewById(R.id.textView);
+                result.setText("Game Name");
             }
         });
     }
 
 }
+
