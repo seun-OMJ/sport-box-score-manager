@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Button button= (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
+
             public void onClick(View view){
                 EditText GameName= (EditText) findViewById(R.id.editTextTextPersonName3);
                 TextView result= (TextView) findViewById(R.id.textView);
