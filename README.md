@@ -23,3 +23,6 @@ This application will be considered successful based on the following criterias:
 
 First, for all the sports available, the users are able to navigate the application and use it for its intended purpose which is to keep scores. Second, users give back positive reviews and make this application their primary scoring tracker whenever they partake in a sports activity and make this application a recommendation to other potential users. Third, users accurately track each player’s performance and improve on certain aspects of their performance.
 
+### Branching Stratergy
+
+Team members will code the assigned features and User stories into a new branch from the main branch and commit changes as we go. Once that feature or User story and fairly tested, the team member will merge that branch into the main branch and test it again.
