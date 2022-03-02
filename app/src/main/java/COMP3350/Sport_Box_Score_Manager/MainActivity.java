@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 final TextView PreviousGame2= (TextView) findViewById(R.id.PreviousGame2);
                 final TextView PreviousGame3= (TextView) findViewById(R.id.PreviousGame3);
                 PreviousGame1.setText(GameName.getText());
+                PreviousGame2.setText(GameName.getText());
+                PreviousGame3.setText(GameName.getText());
             }
         });
     }
