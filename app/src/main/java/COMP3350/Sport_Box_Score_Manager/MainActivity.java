@@ -37,22 +37,22 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-
-        Button button= (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-
-            public void onClick(View view){
-                EditText GameName= (EditText) findViewById(R.id.editTextTextPersonName3);
-                final TextView PreviousGame1= (TextView) findViewById(R.id.PreviousGame1);
-                final TextView PreviousGame2= (TextView) findViewById(R.id.PreviousGame2);
-                final TextView PreviousGame3= (TextView) findViewById(R.id.PreviousGame3);
-                PreviousGame1.setText(GameName.getText());
-                PreviousGame2.setText(GameName.getText());
-                PreviousGame3.setText(GameName.getText());
-            }
-        });
+//
+//
+//        Button button= (Button) findViewById(R.id.button);
+//        button.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//
+////            public void onClick(View view){
+////                EditText GameName= (EditText) findViewById(R.id.editTextTextPersonName3);
+////                final TextView PreviousGame1= (TextView) findViewById(R.id.PreviousGame1);
+////                final TextView PreviousGame2= (TextView) findViewById(R.id.PreviousGame2);
+////                final TextView PreviousGame3= (TextView) findViewById(R.id.PreviousGame3);
+////                PreviousGame1.setText(GameName.getText());
+////                PreviousGame2.setText(GameName.getText());
+////                PreviousGame3.setText(GameName.getText());
+////            }
+//        });
     }
 
 }
