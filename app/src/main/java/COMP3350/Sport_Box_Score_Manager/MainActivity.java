@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View view){
                 EditText GameName= (EditText) findViewById(R.id.editTextTextPersonName3);
-                TextView PreviousGame1= (TextView) findViewById(R.id.PreviousGame1);
-                TextView PreviousGame2= (TextView) findViewById(R.id.PreviousGame2);
-                TextView PreviousGame3= (TextView) findViewById(R.id.PreviousGame3);
+                final TextView PreviousGame1= (TextView) findViewById(R.id.PreviousGame1);
+                final TextView PreviousGame2= (TextView) findViewById(R.id.PreviousGame2);
+                final TextView PreviousGame3= (TextView) findViewById(R.id.PreviousGame3);
                 PreviousGame1.setText(GameName.getText());
             }
         });
