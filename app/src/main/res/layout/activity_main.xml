@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/PreviosGame1"
+        android:id="@+id/PreviousGame1"
         android:layout_width="0dp"
         android:layout_height="74dp"
         android:layout_marginStart="8dp"
@@ -97,11 +97,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PreviosGame1"
+        app:layout_constraintTop_toBottomOf="@+id/PreviousGame1"
         app:layout_constraintVertical_bias="0.102" />
 
     <EditText
-        android:id="@+id/PreiousGame3"
+        android:id="@+id/PreviousGame3"
         android:layout_width="0dp"
         android:layout_height="74dp"
         android:layout_marginStart="8dp"
