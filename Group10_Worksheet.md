@@ -40,22 +40,25 @@ clearly explaining the SOLID violation - specifying the type, provide a link to 
 your links in the issues are to **specific commits** (not to `main`, or `develop` as those will be changed).
 
 Provide a link to the issue you created here.
+The following link will redirect you to the issue found: https://code.cs.umanitoba.ca/winter-2022-a01/group-11/dnd-character-manager/-/blob/main/app/src/main/java/g11/cs3350/dnd_character_manager/data/HasRoll.java
+
+For Group 11's project, our group found a SOLID violation in the file HasRoll.java. The HasRoll.java interface includes a "dmgType" variable, this variable would prevent them from adding in items that do not do damage.
 
 Agile Planning
 --------------
 
 There are quite a bit of features and user stories that we decided as a group to push back for future iterations. A few reasons we decided to push back some features and user stories are time constraint, lack of familiarity with Android Studio, and some features are too big to implement with the given time.
 
-1. https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/5
+1. "As a user, I need to be able to save a game's progress." (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/5)
 
 Different sports have different scoring systems. In order to implement a variety of sports modes into our project, we would need to carefully look at and implement different scoring systems into our project, which can be time consuming. So we decided to push this user story back to future iterations.
 
-2. https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/12
+2. Sports dropdown list (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/12)
 
 This feature is directly tied in with 1. This feature would display a dropdown menu of the available sports mode.
 
-3. https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/8
-https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/7
-https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/6
+3. "As a user, I need to be able to pause a game for timeouts and then resume" (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/8)
+"As a user, I need to be able to reset a game's progress" (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/7)
+"As a user, I need to be able to save a game's progress and continue it" (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/6)
 
 These user stories deal with the manipulation of the flow of the sport being played by the user. Timeout, saving the game progress and continue another time, resetting the game are all controlling the flow of the user's game. These user stories were considered low-medium priority by the group, thus we decided to focus on the higher priorities and push these back for future iterations.
