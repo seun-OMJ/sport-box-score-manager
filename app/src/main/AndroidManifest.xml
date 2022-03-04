@@ -18,7 +18,7 @@
             android:name=".PlayerActivity"
             android:exported="false"
             android:label="@string/title_activity_player"
-            android:theme="@style/Theme.Sportsboxscoremanager.NoActionBar" />
+            android:theme="@style/Theme.Sportsboxscoremanager.NoActionBar"  />
         <activity
             android:name=".MainActivity"
             android:exported="true">
