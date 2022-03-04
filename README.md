@@ -26,3 +26,6 @@ First, for all the sports available, the users are able to navigate the applicat
 ### Branching Stratergy
 
 Team members will code the assigned features and User stories into a new branch from the main branch and commit changes as we go. Once that feature or User story is fairly tested, the team member will merge that branch into the main branch and test it again.
+
+### Worksheet for Iteration 1
+https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/blob/main/i1_worksheet.md
