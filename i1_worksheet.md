@@ -26,7 +26,7 @@ From the vision statement, our branching strategy would be each developer will h
 
 ![](branchPicture.png)
 
-The image above shows our branching strategy in action. We each have our own branch and then add user stories and features into our own branch then merge it into the main branch (the maroon line).
+The image above shows our branching strategy in action. We each have our own branch and then add user stories and features into our own branch then merge it into the main branch (the red line).
 
 SOLID
 -----
