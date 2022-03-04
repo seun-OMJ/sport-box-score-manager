@@ -28,6 +28,9 @@ Provide screen shot of a feature being added using your branching strategy
 successfully. The [GitLab Graph tool can do this](https://code.cs.umanitoba.ca/comp3350-summer2019/cook-eBook/-/network/develop),
 as well as using `git log --graph`.
 
+
+![](branchPicture.png)
+
 SOLID
 -----
 
