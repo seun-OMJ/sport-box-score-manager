@@ -10,6 +10,7 @@ feature, user stories, and merge requests (if used), associated tests, and merge
 that was used complete the feature.
 
 Use one or two paragraphs which can have point-form within them.
+When creating the feature Add Game to the project 
 
 Exceptional code
 ----------------
