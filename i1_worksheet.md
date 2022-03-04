@@ -28,8 +28,9 @@ Provide screen shot of a feature being added using your branching strategy
 successfully. The [GitLab Graph tool can do this](https://code.cs.umanitoba.ca/comp3350-summer2019/cook-eBook/-/network/develop),
 as well as using `git log --graph`.
 
-
+From the vision statement, our branching strategy would be each developer will have their own branch to make some changes and add some features and user stories. We then test and make sure that those features are functional before merging that branch into the main branch and test it again to make sure that everything is still functioning properly. 
 ![](branchPicture.png)
+The image above shows our branching strategy in action. We each have our own branch and then add user stories and features into our own branch then merge it into the main branch (the maroon line).
 
 SOLID
 -----
