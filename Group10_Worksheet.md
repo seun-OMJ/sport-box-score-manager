@@ -34,12 +34,6 @@ The image above shows our branching strategy in action. We each have our own bra
 SOLID
 -----
 
-Find a SOLID violation in the project of group `(n%16)+1` (group 16 does group 1).
-Open an issue in their project with the violation,
-clearly explaining the SOLID violation - specifying the type, provide a link to that issue. Be sure
-your links in the issues are to **specific commits** (not to `main`, or `develop` as those will be changed).
-
-Provide a link to the issue you created here.
 The following link will redirect you to the issue found: https://code.cs.umanitoba.ca/winter-2022-a01/group-11/dnd-character-manager/-/blob/main/app/src/main/java/g11/cs3350/dnd_character_manager/data/HasRoll.java
 
 For Group 11's project, our group found a SOLID violation in the file HasRoll.java. The HasRoll.java interface includes a "dmgType" variable, this variable would prevent them from adding in items that do not do damage.
@@ -58,7 +52,9 @@ Different sports have different scoring systems. In order to implement a variety
 This feature is directly tied in with 1. This feature would display a dropdown menu of the available sports mode.
 
 3. "As a user, I need to be able to pause a game for timeouts and then resume" (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/8)
+
 "As a user, I need to be able to reset a game's progress" (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/7)
+
 "As a user, I need to be able to save a game's progress and continue it" (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/6)
 
 These user stories deal with the manipulation of the flow of the sport being played by the user. Timeout, saving the game progress and continue another time, resetting the game are all controlling the flow of the user's game. These user stories were considered low-medium priority by the group, thus we decided to focus on the higher priorities and push these back for future iterations.
