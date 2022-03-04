@@ -5,6 +5,6 @@ public class points {
         score++;
     }
     public static void subtract(int score){
-
+        score--;
     }
 }
