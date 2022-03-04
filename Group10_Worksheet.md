@@ -6,7 +6,7 @@ Adding a feature
 ### Feature:
 https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/11
 
-The ability to manipulate the scores for each team was added to our project, because it is important to be able to freely add and subtract to the scores of each team. An extra point may be accidentally added by a user and it needs to be reversible in order for the user to correct their mistake. Accurately tracing each team's score is an integral part of this project, we need to have safety measures for when accidents and slips happen.
+The ability to manipulate the scores for each team was added to our project, because it is important to be able to freely add and subtract to the scores of each team. An extra point may be accidentally added by a user and it needs to be reversible in order for the user to correct their mistake. Accurately tracking each team's score is an integral part of this project, we need to have safety measures for when accidents and slips happen.
 
 ### User Stories:
 https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/4
@@ -14,6 +14,13 @@ https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/
 As mentioned before, accurate tracking of scores is very important for this project. Mistakes and and user errors can and will happen. There needs to be safety measures for the user to undo their actions so that they can resume to what they were doing.
 
 It would be easy for the user to have a visual button when adding or subtracting scores, on our project, the buttons are clearly indicated.
+
+Exceptional code
+----------------
+
+Provide a link to a test of exceptional code. In a few sentences,
+provide an explanation of why the exception is handled or thrown
+in the code you are testing.
 
 Branching
 ----------
@@ -33,7 +40,6 @@ clearly explaining the SOLID violation - specifying the type, provide a link to 
 your links in the issues are to **specific commits** (not to `main`, or `develop` as those will be changed).
 
 Provide a link to the issue you created here.
-
 
 Agile Planning
 --------------
