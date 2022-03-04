@@ -25,7 +25,7 @@ in the code you are testing.
 Branching
 ----------
 
-From the vision statement, our branching strategy would be each developer will have their own branch to make some changes and add some features and user stories. We then test and make sure that those features are functional before merging that branch into the main branch and test it again to make sure that everything is still functioning properly. 
+From the vision statement (https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/blob/main/README.md), our branching strategy would be each developer will have their own branch to make some changes and add some features and user stories. We then test and make sure that those features are functional before merging that branch into the main branch and test it again to make sure that everything is still functioning properly. 
 
 ![](branchPicture.png)
 
