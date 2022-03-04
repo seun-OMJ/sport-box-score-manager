@@ -38,6 +38,8 @@ The following link will redirect you to the issue found: https://code.cs.umanito
 
 For Group 11's project, our group found a SOLID violation in the file HasRoll.java. The HasRoll.java interface includes a "dmgType" variable, this variable would prevent them from adding in items that do not do damage.
 
+Link to the issue created: https://code.cs.umanitoba.ca/winter-2022-a01/group-11/dnd-character-manager/-/issues/32
+
 Agile Planning
 --------------
 
