@@ -15,13 +15,6 @@ As mentioned before, accurate tracking of scores is very important for this proj
 
 It would be easy for the user to have a visual button when adding or subtracting scores, on our project, the buttons are clearly indicated.
 
-Exceptional code
-----------------
-
-Provide a link to a test of exceptional code. In a few sentences,
-provide an explanation of why the exception is handled or thrown
-in the code you are testing.
-
 Branching
 ----------
 
@@ -40,6 +33,7 @@ clearly explaining the SOLID violation - specifying the type, provide a link to 
 your links in the issues are to **specific commits** (not to `main`, or `develop` as those will be changed).
 
 Provide a link to the issue you created here.
+
 
 Agile Planning
 --------------
