@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be446619-c3b5-46e3-9031-57c930256e34" name="Default Changelist" comment="Changing tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/ScoreActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/ScoreActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" afterDir="false" />
     </list>

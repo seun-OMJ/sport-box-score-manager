@@ -46,7 +46,7 @@ public class ScoreActivity extends AppCompatActivity {
         add4 = findViewById(R.id.button5);
         sub4 = findViewById(R.id.button10);
 
-        reset = findViewById(R.id.ResetButton);
+        reset = findViewById(R.id.resetButton);
         save= findViewById(R.id.saveButton);
 
         reset.setOnClickListener(new View.OnClickListener() {
