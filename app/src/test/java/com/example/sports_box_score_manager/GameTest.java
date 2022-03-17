@@ -3,7 +3,7 @@ package com.example.sports_box_score_manager;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class JUnitTest {
+public class GameTest {
 
 
     @Test

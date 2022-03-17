@@ -9,7 +9,6 @@ public class Game {
         this.gameName = gameName;
         this.playerName = playerName;
         score = 0;
-
     }
 
     public String getGameName() {
