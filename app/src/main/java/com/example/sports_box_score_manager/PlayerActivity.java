@@ -12,6 +12,8 @@ import android.widget.TextView;
 public class PlayerActivity extends AppCompatActivity {
     public static final String extraText = "com.example.sports_box_score_manager.extraText";
     public static final String extraText2 = "com.example.sports_box_score_manager.extraText2";
+    public static final String extraText3 = "com.example.sports_box_score_manager.extraText3";
+    public static final String extraText4 = "com.example.sports_box_score_manager.extraText4";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +26,6 @@ public class PlayerActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // int text = R.id.EnterNewGameName;
-                //String x = (String) getText(text);
-                //  Game game = new Game(x);
                 openActivity2();
             }
         });
@@ -35,15 +34,31 @@ public class PlayerActivity extends AppCompatActivity {
     public void openActivity2() {
         EditText edit1 = (EditText) findViewById(R.id.editTextTextPersonName);
         EditText edit2 = (EditText) findViewById(R.id.editTextTextPersonName2);
-        String text = edit1.getText().toString();
+        EditText edit3 = (EditText) findViewById(R.id.editTextTextPersonName4);
+        EditText edit4 = (EditText) findViewById(R.id.editTextTextPersonName5);
+        String text1 = edit1.getText().toString();
         String text2 = edit2.getText().toString();
+        String text3 = edit3.getText().toString();
+        String text4 = edit4.getText().toString();
+        if(text1.length()==0 | text1.length()>25){
+            edit1.setError("Invalid Input for Player 1");
+        }else if(text2.length()==0 | text2.length()>25) {
+            edit2.setError("Invalid Input for Player 2");
+        }else if(text3.length()==0 | text3.length()>25) {
+            edit3.setError("Invalid Input for Player 3");
+        } else if(text4.length()==0 | text4.length()>25) {
+            edit4.setError("Invalid Input for Player 4");
+        }else{
+            nextPage(text1,text2,text3,text4);
+        }
+
+    }
+    public void nextPage(String text1,String text2,String text3,String text4){
         Intent intent = new Intent(this, ScoreActivity.class);
-        intent.putExtra(extraText,text);
+        intent.putExtra(extraText,text1);
         intent.putExtra(extraText2,text2);
+        intent.putExtra(extraText3,text3);
+        intent.putExtra(extraText4,text4);
         startActivity(intent);
-
-
-
-
     }
 }

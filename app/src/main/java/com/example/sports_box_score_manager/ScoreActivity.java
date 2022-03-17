@@ -4,16 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.Sampler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import com.example.sports_box_score_manager.logic.points;
 
 public class ScoreActivity extends AppCompatActivity {
-            TextView score1,score2;
-      //      int count1,count2;
-            Button add1,sub1,add2,sub2;
+            TextView score1,score2,score3,score4;
+            Button add1,sub1,add2,sub2,add3,sub3,add4,sub4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +19,19 @@ public class ScoreActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String text = intent.getStringExtra(PlayerActivity.extraText);
         String text2 = intent.getStringExtra(PlayerActivity.extraText2);
+        String text3 = intent.getStringExtra(PlayerActivity.extraText3);
+        String text4 = intent.getStringExtra(PlayerActivity.extraText4);
 
-        TextView textView1 = findViewById(R.id.textView8);
-        TextView textView2 = findViewById(R.id.textView10);
+        TextView textView1 = findViewById(R.id.textP1Name);
+        TextView textView2 = findViewById(R.id.textP2Name);
+        TextView textView3 = findViewById(R.id.textP3Name);
+        TextView textView4 = findViewById(R.id.textP4Name);
+
         textView1.setText(text);
         textView2.setText(text2);
-     //   count1 = 0;
-    //    count2 = 0;
+        textView3.setText(text3);
+        textView4.setText(text4);
+
         score1 = findViewById(R.id.textView7);
         score2 = findViewById(R.id.textView12);
         add1 = findViewById(R.id.button12);
