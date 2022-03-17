@@ -395,7 +395,7 @@
     <Button
         android:id="@+id/button12"
         android:layout_width="55dp"
-        android:layout_height="33dp"
+        android:layout_height="39dp"
         android:background="@color/white"
         android:shadowColor="#000000"
         android:text="+"

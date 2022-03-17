@@ -34,80 +34,80 @@ public class ScoreActivity extends AppCompatActivity {
 
         score1 = findViewById(R.id.textView7);
         score2 = findViewById(R.id.textView12);
+        score3= findViewById(R.id.textView9);
+        score4= findViewById(R.id.textView15);
+
         add1 = findViewById(R.id.button12);
         sub1 = findViewById(R.id.button13);
         add2 = findViewById(R.id.button9);
         sub2 = findViewById(R.id.button11);
+        add3 = findViewById(R.id.button2);
+        sub3 = findViewById(R.id.button4);
+        add4 = findViewById(R.id.button5);
+        sub4 = findViewById(R.id.button10);
 
         add1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = score1.getText().toString();
-                int score = Integer.parseInt(text);
-                score++;
-                score1.setText(String.valueOf(score));
+                addScore(score1);
             }
         });
         add2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = score2.getText().toString();
-                int score = Integer.parseInt(text);
-                score++;
-                score2.setText(String.valueOf(score));
+                    addScore(score2);
+            }
+        });
+        add3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addScore(score3);
+            }
+        });
+        add4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addScore(score4);
             }
         });
 
         sub1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = score1.getText().toString();
-                int score = Integer.parseInt(text);
-                if (score>0){
-                score--;}
-                score1.setText(String.valueOf(score));
+                subScore(score1);
             }
         });
         sub2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = score2.getText().toString();
-                int score = Integer.parseInt(text);
-                if(score>0){
-                score--;}
-                score2.setText(String.valueOf(score));
+                subScore(score2);
             }
         });
-
-
-
-
-
-    }
-
-    public void add(int num,TextView text,View view){
-        num++;
-        text.setText(""+num);
-
-    }
-    public void subtract(int num, TextView text, View view){
-        num--;
-        text.setText(""+num);
-    }
-    public void work(Button b, TextView sc){
-        b.setOnClickListener(new View.OnClickListener() {
+        sub3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               String text = sc.getText().toString();
-               int score = Integer.parseInt(text);
-               if(b.getText()=="+"){
-                   score++;
-               }
-               else if(b.getText()=="-"){
-                   score--;
-               }
-               sc.setText(String.valueOf(score));
+                subScore(score3);
             }
         });
+        sub4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                subScore(score4);
+            }
+        });
+    }
+
+    public void addScore(TextView text){
+        int score =Integer.parseInt(text.getText().toString());
+        score++;
+        text.setText(String.valueOf(score));
+
+    }
+    public void subScore(TextView text){
+        int score = Integer.parseInt(text.getText().toString());
+        if (score>0){
+            score--;
+        }
+        text.setText(String.valueOf(score));
     }
 }
