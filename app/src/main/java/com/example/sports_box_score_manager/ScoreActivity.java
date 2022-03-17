@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class ScoreActivity extends AppCompatActivity {
             TextView score1,score2,score3,score4;
-            Button add1,sub1,add2,sub2,add3,sub3,add4,sub4;
+            Button add1,sub1,add2,sub2,add3,sub3,add4,sub4, reset,save;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,22 @@ public class ScoreActivity extends AppCompatActivity {
         sub3 = findViewById(R.id.button4);
         add4 = findViewById(R.id.button5);
         sub4 = findViewById(R.id.button10);
+
+        reset = findViewById(R.id.ResetButton);
+        save= findViewById(R.id.saveButton);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reset();
+            }
+        });
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                save();
+            }
+        });
 
         add1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,5 +125,17 @@ public class ScoreActivity extends AppCompatActivity {
             score--;
         }
         text.setText(String.valueOf(score));
+    }
+    //Developer Tasks to reset or save all the score
+    public void reset(){
+        score1.setText("0");
+        score2.setText("0");
+        score3.setText("0");
+        score4.setText("0");
+    }
+    public void save(){
+        reset();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
