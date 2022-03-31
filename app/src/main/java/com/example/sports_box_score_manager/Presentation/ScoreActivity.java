@@ -152,7 +152,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     public void startPauseBtn(View view) {
-        if(timerStarted == false) {
+        if(!timerStarted) {
             timerStarted=true;
             timerStartBtn.setText("pause");
             startTimer();
@@ -199,6 +199,6 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private String timeFormatter(int secs, int mins) {
-        return String.format(String.format("%02d", mins) + " : " + String.format("%02d",secs));
-    }
+        return String.format("%s : %s",  mins, secs);
+}
 }
