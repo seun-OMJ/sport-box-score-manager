@@ -20,7 +20,7 @@
             android:label="@string/title_activity_player"
             android:theme="@style/Theme.Sportsboxscoremanager.NoActionBar"  />
         <activity
-            android:name=".MainActivity"
+            android:name=".Presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

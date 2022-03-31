@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.sports_box_score_manager.Presentation.MainActivity;
+
 public class ScoreActivity extends AppCompatActivity {
             TextView score1,score2,score3,score4;
             Button add1,sub1,add2,sub2,add3,sub3,add4,sub4, reset,save;

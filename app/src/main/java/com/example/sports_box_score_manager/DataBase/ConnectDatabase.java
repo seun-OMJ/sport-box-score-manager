@@ -1,4 +1,4 @@
-package com.example.sports_box_score_manager;
+package com.example.sports_box_score_manager.DataBase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

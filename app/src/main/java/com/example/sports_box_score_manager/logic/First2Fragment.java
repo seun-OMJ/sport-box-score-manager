@@ -1,19 +1,19 @@
-package com.example.sports_box_score_manager;
+package com.example.sports_box_score_manager.logic;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.sports_box_score_manager.databinding.FragmentFirstBinding;
+import com.example.sports_box_score_manager.R;
+import com.example.sports_box_score_manager.databinding.FragmentFirst2Binding;
 
-public class FirstFragment extends Fragment {
+public class First2Fragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentFirst2Binding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +21,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentFirst2Binding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -32,8 +32,8 @@ public class FirstFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                NavHostFragment.findNavController(First2Fragment.this)
+                        .navigate(R.id.action_First2Fragment_to_Second2Fragment);
             }
         });
     }

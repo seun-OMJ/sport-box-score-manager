@@ -1,4 +1,4 @@
-package com.example.sports_box_score_manager;
+package com.example.sports_box_score_manager.Presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.sports_box_score_manager.PlayerActivity;
+import com.example.sports_box_score_manager.R;
 
 
 public class MainActivity extends AppCompatActivity {
