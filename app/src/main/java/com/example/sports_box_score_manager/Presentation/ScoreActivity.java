@@ -162,7 +162,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     public void startPauseBtn(View view) {
-        if(timerStarted == false) {
+        if(!timerStarted) {
             timerStarted=true;
             timerStartBtn.setText("pause");
             startTimer();
