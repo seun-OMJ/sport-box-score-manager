@@ -8,9 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import com.example.sports_box_score_manager.PlayerActivity;
 import com.example.sports_box_score_manager.R;
 
 
@@ -75,4 +73,31 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public static class Game {
+        private String gameName;
+        private String playerName;
+        private int score;
+
+        public Game(String gameName, String playerName) {
+            this.gameName = gameName;
+            this.playerName = playerName;
+            score = 0;
+        }
+
+        public String getGameName() {
+            return gameName;
+        }
+
+        public String getPlayerName() {
+            return playerName;
+        }
+
+        public void setScore(int score) {
+            this.score = score;
+        }
+
+        public int getScore() {
+            return score;
+        }
+    }
 }

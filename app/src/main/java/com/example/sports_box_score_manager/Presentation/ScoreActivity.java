@@ -1,4 +1,4 @@
-package com.example.sports_box_score_manager;
+package com.example.sports_box_score_manager.Presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.sports_box_score_manager.Presentation.MainActivity;
+import com.example.sports_box_score_manager.Presentation.PlayerActivity;
+import com.example.sports_box_score_manager.R;
 
 public class ScoreActivity extends AppCompatActivity {
             TextView score1,score2,score3,score4;
@@ -136,6 +138,7 @@ public class ScoreActivity extends AppCompatActivity {
         score4.setText("0");
     }
     public void save(){
+        //INSERT INTO tutorials_tbl VALUES (100,'Learn PHP', 'John Poul', NOW());
         reset();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

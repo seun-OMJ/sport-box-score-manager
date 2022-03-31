@@ -3,15 +3,17 @@ package com.example.sports_box_score_manager;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import com.example.sports_box_score_manager.Presentation.MainActivity;
+
 public class GameTest {
 
 
     @Test
     public void gameTest()
     {
-        Game Game1 = new Game("Game1", "Jass");
-        Game Game2 = new Game("Game2", "Aadi");
-        Game Game3 = new Game("Game3", "Sid");
+        MainActivity.Game Game1 = new MainActivity.Game("Game1", "Jass");
+        MainActivity.Game Game2 = new MainActivity.Game("Game2", "Aadi");
+        MainActivity.Game Game3 = new MainActivity.Game("Game3", "Sid");
 
         assert (Game1 != null);
         assert (Game2 != null);

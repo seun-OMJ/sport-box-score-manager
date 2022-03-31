@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sportsboxscoremanager">
         <activity
-            android:name=".ScoreActivity"
+            android:name=".Presentation.ScoreActivity"
             android:exported="false"
             android:label="@string/title_activity_score"
             android:theme="@style/Theme.Sportsboxscoremanager.NoActionBar" />
         <activity
-            android:name=".PlayerActivity"
+            android:name=".Presentation.PlayerActivity"
             android:exported="false"
             android:label="@string/title_activity_player"
             android:theme="@style/Theme.Sportsboxscoremanager.NoActionBar"  />

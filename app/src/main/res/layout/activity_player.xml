@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sports_box_score_manager.PlayerActivity">
+    tools:context="com.example.sports_box_score_manager.Presentation.PlayerActivity">
 
 
     <Button

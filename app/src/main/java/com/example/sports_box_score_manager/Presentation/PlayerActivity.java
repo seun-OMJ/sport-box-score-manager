@@ -1,4 +1,4 @@
-package com.example.sports_box_score_manager;
+package com.example.sports_box_score_manager.Presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.sports_box_score_manager.Presentation.MainActivity;
+import com.example.sports_box_score_manager.R;
 
 public class PlayerActivity extends AppCompatActivity {
     public static final String extraText = "com.example.sports_box_score_manager.extraText";
