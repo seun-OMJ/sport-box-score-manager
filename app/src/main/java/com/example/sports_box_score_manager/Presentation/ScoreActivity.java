@@ -1,19 +1,13 @@
 package com.example.sports_box_score_manager.Presentation;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.sports_box_score_manager.Presentation.MainActivity;
-import com.example.sports_box_score_manager.Presentation.PlayerActivity;
 import com.example.sports_box_score_manager.logic.points;
 import com.example.sports_box_score_manager.R;
 
@@ -199,6 +193,6 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private String timeFormatter(int secs, int mins) {
-        return String.format("%s : %s",  mins, secs);
+        return String.format("%02d : %02d", mins, secs);
 }
 }
