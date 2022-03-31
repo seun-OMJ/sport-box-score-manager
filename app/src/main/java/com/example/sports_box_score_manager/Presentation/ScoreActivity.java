@@ -23,7 +23,7 @@ public class ScoreActivity extends AppCompatActivity {
 
             boolean timerStarted = false;
             Timer timer;
-            TimerTask timerTask;
+            TimerTask taskTimer;
             Double time = 0.0;
 
     @Override
@@ -167,25 +167,23 @@ public class ScoreActivity extends AppCompatActivity {
         } else {
             timerStarted = false;
             timerStartBtn.setText("start");
-            timerTask.cancel();
+            taskTimer.cancel();
         }
     }
 
     public void startTimer() {
-        timerTask = new TimerTask() {
-            @Override
+        taskTimer = new TimerTask() {
             public void run() {
                 runOnUiThread(new Runnable() {
-                    @Override
                     public void run() {
                         time++;
-                        timerText.setText(getTimerText());
+                        timerText.setText(getTimeString());
                     }
                 });
 
             }
         };
-        timer.scheduleAtFixedRate(timerTask, 0, 1000);
+        timer.scheduleAtFixedRate(taskTimer, 0, 1000);
     }
 
     public void resetTapped(View view) {
@@ -195,34 +193,30 @@ public class ScoreActivity extends AppCompatActivity {
         resetAlert.setPositiveButton("Reset", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if(timerTask != null) {
-                    timerTask.cancel();
+                if(taskTimer != null) {
+                    taskTimer.cancel();
                     time = 0.0;
                     timerStarted = false;
-                    timerText.setText(formatTime(0,0,0));
+                    timerText.setText(timeFormatter(0,0));
                 }
             }
         });
         resetAlert.setNeutralButton("cancel", new DialogInterface.OnClickListener() {
            @Override
-           public void onClick(DialogInterface dialogInterface, int i) {
-
-           }
-        });
+           public void onClick(DialogInterface dialogInterface, int i) {}});
         resetAlert.show();
     }
 
-    private String getTimerText() {
-        int rounded = (int) Math.round(time);
-        int seconds = ((rounded % 86400) % 3600) % 60;
-        int minutes = ((rounded % 86400) % 3600) / 60;
-        int hours = ((rounded % 86400) / 3600);
-
-        return formatTime(seconds, minutes, hours);
-
+    private String getTimeString() {
+        int rnd = (int) Math.round(time);
+        int day = 86400; //seconds in a day
+        int hour = 3600; //seconds in an hour
+        int secs = ((rnd % day) % hour) % 60;
+        int mins = ((rnd % day) % hour) / 60;
+        return timeFormatter(secs, mins);
     }
 
-    private String formatTime(int secs, int mins, int hrs) {
-        return String.format("%02d", hrs) + " : " + String.format("%02d", mins) + " : " + String.format("%02d",secs);
+    private String timeFormatter(int secs, int mins) {
+        return String.format(String.format("%02d", mins) + " : " + String.format("%02d",secs));
     }
 }

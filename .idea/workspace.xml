@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07623ee4-6fdc-4e22-ba44-15813c8fc9bd" name="Default Changelist" comment="Fixed layout issues with title">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="07623ee4-6fdc-4e22-ba44-15813c8fc9bd" name="Default Changelist" comment="Added timer code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/ScoreActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/ScoreActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +65,7 @@
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager" selected="Android App.Sport_Box_Score_Manager.app">
     <configuration name="ScoreActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
@@ -282,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648702812336</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added timer code">
+      <created>1648714097674</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648714097674</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +307,7 @@
     <MESSAGE value="Fixed layout" />
     <MESSAGE value="Fixed layout issues" />
     <MESSAGE value="Fixed layout issues with title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed layout issues with title" />
+    <MESSAGE value="Added timer code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added timer code" />
   </component>
 </project>
