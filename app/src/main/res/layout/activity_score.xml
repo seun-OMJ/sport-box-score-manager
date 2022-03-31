@@ -411,7 +411,7 @@
         android:text="start"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view5"
-        android:onClick="startBtnTapped"/>
+        android:onClick="startPauseBtn"/>
 
 
     <TextView
@@ -421,7 +421,7 @@
         android:layout_marginStart="98dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="101dp"
-        android:text="00 : 00 : 00"
+        android:text="00 : 00"
         android:textColor="@android:color/black"
         android:textSize="60sp"
         app:layout_constraintEnd_toStartOf="@+id/button_reset"
@@ -437,7 +437,7 @@
         android:text="reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view5"
-        android:onClick="resetTapped"/>
+        android:onClick="resetBtn"/>
 
     <Button
         android:id="@+id/button9"

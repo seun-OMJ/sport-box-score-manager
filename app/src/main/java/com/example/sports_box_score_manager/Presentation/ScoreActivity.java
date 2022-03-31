@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,7 +25,7 @@ public class ScoreActivity extends AppCompatActivity {
 
             boolean timerStarted = false;
             Timer timer;
-            TimerTask taskTimer;
+            TimerTask sportTime;
             Double time = 0.0;
 
     @Override
@@ -159,7 +161,7 @@ public class ScoreActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startBtnTapped(View view) {
+    public void startPauseBtn(View view) {
         if(timerStarted == false) {
             timerStarted=true;
             timerStartBtn.setText("pause");
@@ -167,12 +169,12 @@ public class ScoreActivity extends AppCompatActivity {
         } else {
             timerStarted = false;
             timerStartBtn.setText("start");
-            taskTimer.cancel();
+            sportTime.cancel();
         }
     }
 
     public void startTimer() {
-        taskTimer = new TimerTask() {
+        sportTime = new TimerTask() {
             public void run() {
                 runOnUiThread(new Runnable() {
                     public void run() {
@@ -180,31 +182,21 @@ public class ScoreActivity extends AppCompatActivity {
                         timerText.setText(getTimeString());
                     }
                 });
-
             }
         };
-        timer.scheduleAtFixedRate(taskTimer, 0, 1000);
+        timer.scheduleAtFixedRate(sportTime, 1000, 1000);
+
     }
 
-    public void resetTapped(View view) {
-        AlertDialog.Builder resetAlert = new AlertDialog.Builder(this);
-        resetAlert.setTitle("Reset Timer");
-        resetAlert.setMessage("Reset the timer?");
-        resetAlert.setPositiveButton("Reset", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                if(taskTimer != null) {
-                    taskTimer.cancel();
-                    time = 0.0;
-                    timerStarted = false;
-                    timerText.setText(timeFormatter(0,0));
-                }
-            }
-        });
-        resetAlert.setNeutralButton("cancel", new DialogInterface.OnClickListener() {
-           @Override
-           public void onClick(DialogInterface dialogInterface, int i) {}});
-        resetAlert.show();
+
+
+    public void resetBtn(View view) {
+        if(sportTime != null) {
+            sportTime.cancel();
+            time = 0.0;
+            timerStarted = false;
+            timerText.setText(timeFormatter(0, 0));
+        }
     }
 
     private String getTimeString() {
