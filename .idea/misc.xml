@@ -12,6 +12,14 @@
         <entry key="..\:/Users/omojo/StudioProjects/sport-box-score-manager/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/omojo/StudioProjects/sport-box-score-manager/app/src/main/res/layout/activity_player.xml" value="0.12132725430597771" />
         <entry key="..\:/Users/omojo/StudioProjects/sport-box-score-manager/app/src/main/res/layout/activity_score.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_player.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_score.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_player.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_score.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
       </map>
     </option>
   </component>

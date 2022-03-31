@@ -1,9 +1,13 @@
 package com.example.sports_box_score_manager.Presentation;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,14 +16,27 @@ import com.example.sports_box_score_manager.Presentation.MainActivity;
 import com.example.sports_box_score_manager.Presentation.PlayerActivity;
 import com.example.sports_box_score_manager.R;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class ScoreActivity extends AppCompatActivity {
-            TextView score1,score2,score3,score4;
-            Button add1,sub1,add2,sub2,add3,sub3,add4,sub4, reset,save;
+            TextView score1,score2,score3,score4, timerText;
+            Button add1,sub1,add2,sub2,add3,sub3,add4,sub4, reset,save, timerStartBtn, timerResetBtn;
+
+            boolean timerStarted = false;
+            Timer timer;
+            TimerTask sportTime;
+            Double time = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
+        timerText = (TextView) findViewById(R.id.text_view_timer);
+        timerStartBtn = (Button) findViewById(R.id.button_start);
+        timer = new Timer();
+
         Intent intent = getIntent();
         String text = intent.getStringExtra(PlayerActivity.extraText);
         String text2 = intent.getStringExtra(PlayerActivity.extraText2);
@@ -142,5 +159,56 @@ public class ScoreActivity extends AppCompatActivity {
         reset();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void startPauseBtn(View view) {
+        if(timerStarted == false) {
+            timerStarted=true;
+            timerStartBtn.setText("pause");
+            startTimer();
+        } else {
+            timerStarted = false;
+            timerStartBtn.setText("start");
+            sportTime.cancel();
+        }
+    }
+
+    public void startTimer() {
+        sportTime = new TimerTask() {
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        time++;
+                        timerText.setText(getTimeString());
+                    }
+                });
+            }
+        };
+        timer.scheduleAtFixedRate(sportTime, 1000, 1000);
+
+    }
+
+
+
+    public void resetBtn(View view) {
+        if(sportTime != null) {
+            sportTime.cancel();
+            time = 0.0;
+            timerStarted = false;
+            timerText.setText(timeFormatter(0, 0));
+        }
+    }
+
+    private String getTimeString() {
+        int rnd = (int) Math.round(time);
+        int day = 86400; //seconds in a day
+        int hour = 3600; //seconds in an hour
+        int secs = ((rnd % day) % hour) % 60;
+        int mins = ((rnd % day) % hour) / 60;
+        return timeFormatter(secs, mins);
+    }
+
+    private String timeFormatter(int secs, int mins) {
+        return String.format(String.format("%02d", mins) + " : " + String.format("%02d",secs));
     }
 }
