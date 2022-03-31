@@ -209,6 +209,6 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private String timeFormatter(int secs, int mins) {
-        return String.format(String.format("%02d", mins) + " : " + String.format("%02d",secs));
-    }
+        return String.format("%s : %s",  mins, secs);
+}
 }
