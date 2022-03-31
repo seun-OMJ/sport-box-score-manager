@@ -387,7 +387,7 @@
 
     <View
         android:id="@+id/view5"
-        android:layout_width="392dp"
+        android:layout_width="0dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -401,7 +401,7 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="0dp"
+        android:layout_width="584dp"
         android:layout_height="45dp"
         android:text="Score Board"
         android:textAlignment="center"
@@ -410,9 +410,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view5"
         app:layout_constraintTop_toTopOf="@+id/view5"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button9"
