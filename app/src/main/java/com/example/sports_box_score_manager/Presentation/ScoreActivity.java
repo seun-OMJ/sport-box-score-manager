@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.sports_box_score_manager.Presentation.MainActivity;
 import com.example.sports_box_score_manager.Presentation.PlayerActivity;
+import com.example.sports_box_score_manager.logic.points;
 import com.example.sports_box_score_manager.R;
 
 import java.util.Timer;
@@ -23,6 +24,7 @@ public class ScoreActivity extends AppCompatActivity {
             TextView score1,score2,score3,score4, timerText;
             Button add1,sub1,add2,sub2,add3,sub3,add4,sub4, reset,save, timerStartBtn, timerResetBtn;
 
+    
             boolean timerStarted = false;
             Timer timer;
             TimerTask sportTime;
@@ -86,67 +88,55 @@ public class ScoreActivity extends AppCompatActivity {
         add1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addScore(score1);
+                points.addScore(score1);
             }
         });
         add2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    addScore(score2);
+                    points.addScore(score2);
             }
         });
         add3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addScore(score3);
+                points.addScore(score3);
             }
         });
         add4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addScore(score4);
+                points.addScore(score4);
             }
         });
 
         sub1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                subScore(score1);
+                points.subScore(score1);
             }
         });
         sub2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                subScore(score2);
+                points.subScore(score2);
             }
         });
         sub3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                subScore(score3);
+                points.subScore(score3);
             }
         });
         sub4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                subScore(score4);
+                points.subScore(score4);
             }
         });
     }
 
-    public void addScore(TextView text){
-        int score =Integer.parseInt(text.getText().toString());
-        score++;
-        text.setText(String.valueOf(score));
 
-    }
-    public void subScore(TextView text){
-        int score = Integer.parseInt(text.getText().toString());
-        if (score>0){
-            score--;
-        }
-        text.setText(String.valueOf(score));
-    }
     //Developer Tasks to reset or save all the score
     public void reset(){
         score1.setText("0");
