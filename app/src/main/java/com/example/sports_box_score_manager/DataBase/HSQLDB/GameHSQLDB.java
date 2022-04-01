@@ -56,7 +56,7 @@ public class GameHSQLDB implements GameData {
         final List<GameModel> games = new ArrayList<>();
 
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("SELECT * FROM games WHERE gameID=?");
+            final PreparedStatement st = c.prepareStatement("SELECT * FROM games WHERE gameID= ? ");
             st.setInt(1, game.getGameId());
 
             final ResultSet rs = st.executeQuery();
@@ -108,14 +108,14 @@ public class GameHSQLDB implements GameData {
 
     public GameModel updateGame(GameModel game){
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("UPDATE games SET name = ? WHERE gameID = ?");
-            st.setInt(1, game.getGameId());
-            st.setString(2, game.getGameName());
-            st.setString(3,game.getPlayer1Name());
-            st.setString(4, game.getPlayer2Name());
-            st.setString(5,game.getPlayer3Name());
-            st.setString(6,game.getPlayer4Name());
+            final PreparedStatement st = c.prepareStatement("UPDATE games SET name = ?,player1 = ?,player2 = ?,player3 = ?,player4 = ? WHERE gameID = ?");
 
+            st.setString(1, game.getGameName());
+            st.setString(2,game.getPlayer1Name());
+            st.setString(3, game.getPlayer2Name());
+            st.setString(4,game.getPlayer3Name());
+            st.setString(5,game.getPlayer4Name());
+            st.setInt(6, game.getGameId());
             st.executeUpdate();
 
             return game;

@@ -70,7 +70,7 @@ public class GameAccess {
         return gameData.updateGame(crntGame);
     }
 
-    public void deleteCourse(GameModel crntGame) {
+    public void deleteGame(GameModel crntGame) {
         gameData.deleteGame(crntGame);
     }
 
