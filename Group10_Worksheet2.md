@@ -22,7 +22,7 @@ This technical debt can be classified as prudent technical debt. The group was a
 When the group was working on iteration 1, the group was split onto the presentation, business, and logic groups. However, this has not been working out well and as a group, looking back at iteration 1 we as a group decided to change up the way we work on the project. The group decided to take up and work on a feature individually from the UI elements to testing.
 
 ### Design Patterns
-
+The design pattern that the group has used for this project is based on the behavioural classification of software design. Our objects are designed communicate with each other and each object are created with SOLID principles in mind.
 
 ### Iteration 1 Feedback Fixes
 From Iteration 1 [Issue #19](https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/issues/19), there was a single responsibility principle violation in our Score.activity.class. Adding and subtracting scores were in this UI layer class which violates SRP. In commit 7564ce87830d0d3c349e3ec16d6571c00eef2e37, we have fixed this problem and have moved addScore and subScore functionalities to points.java.
