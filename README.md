@@ -29,3 +29,9 @@ Team members will code the assigned features and User stories into a new branch 
 
 ### Worksheet for Iteration 1
 https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/blob/main/Group10_Worksheet.md
+
+### Notes for Iteration 2
+Our teamates Harry Pu and Patrick Isenor dropped out of the course that made our team left with only 3 team members, hence we only have few features implemented. Harry Pu was responsible for Unit Testing and Patrick was responsible for Feature drop down sports list and some HSQLDB implementation.
+
+### Worksheet for Iteration 2
+https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/blob/main/Group10_Worksheet2.md
