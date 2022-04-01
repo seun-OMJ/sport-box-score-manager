@@ -10,15 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07623ee4-6fdc-4e22-ba44-15813c8fc9bd" name="Default Changelist" comment="Simplified timer code">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/ScoreActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/ScoreActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gamedb.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gamedb.script" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/GameData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/HSQLDB/GameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/HSQLDB/GameHSQLDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/application/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/application/Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/logic/GameAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/sports_box_score_manager/logic/gameAccessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/ConnectDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/CreateTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/InsertQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Objects/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Objects/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/logic/First2Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/First2Fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/logic/FirstFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/FirstFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/logic/Second2Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/Second2Fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/logic/SecondFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/Presentation/SecondFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_first2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_first2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[5149473056353498]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -27,6 +44,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -68,7 +88,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Android App.Sport_Box_Score_Manager.app">
+  <component name="RunManager" selected="Gradle.gameAccessTest.insert">
     <configuration name="ScoreActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
       <module name="sports-box-score-manager.app" />
       <option name="DEPLOY" value="true" />
@@ -246,8 +266,30 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="gameAccessTest.insert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.example.sports_box_score_manager.logic.gameAccessTest.insert&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.gameAccessTest.insert" />
         <item itemvalue="Android App.ScoreActivity" />
       </list>
     </recent_temporary>

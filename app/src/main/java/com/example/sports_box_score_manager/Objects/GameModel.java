@@ -17,6 +17,11 @@ public class GameModel {
         this.player3Name = player3Name;
         this.player4Name = player4Name;
     }
+
+    public GameModel(int gameID) {
+        this.gameId = gameId;
+    }
+
     //getters and setters
     public int getGameId() {
         return gameId;

@@ -1,4 +1,4 @@
-package com.example.sports_box_score_manager.logic;
+package com.example.sports_box_score_manager.Presentation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
