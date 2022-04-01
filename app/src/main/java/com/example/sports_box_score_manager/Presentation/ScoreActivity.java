@@ -193,6 +193,19 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private String timeFormatter(int secs, int mins) {
-        return String.format("%02d : %02d", mins, secs);
+        String sec=""+secs;
+        String min=""+mins;
+        if(mins<10){
+             min="0"+min;
+        }
+        if(secs<10){
+            sec="0"+sec;
+        }
+        if(mins==0){
+            return sec;
+        }else{
+            return min+" : "+ sec;
+        }
+
 }
 }

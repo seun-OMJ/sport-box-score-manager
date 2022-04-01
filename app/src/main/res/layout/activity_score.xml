@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/white"
     tools:context="com.example.sports_box_score_manager.Presentation.ScoreActivity">
 
     <TextView
@@ -421,16 +421,16 @@
         android:layout_height="59dp"
         android:layout_marginTop="12dp"
         android:autoText="false"
-        android:background="@color/black"
+        android:background="@color/white"
         android:text="00:00"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/view7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view5"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <Button
         android:id="@+id/button_reset"
