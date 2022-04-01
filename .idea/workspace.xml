@@ -11,17 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="07623ee4-6fdc-4e22-ba44-15813c8fc9bd" name="Default Changelist" comment="Simplified timer code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gamedb.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/gamedb.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gamedb.script" beforeDir="false" afterPath="$PROJECT_DIR$/app/gamedb.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/HSQLDB/GameHSQLDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/DataBase/HSQLDB/GameHSQLDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/logic/GameAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sports_box_score_manager/logic/GameAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/sports_box_score_manager/logic/gameAccessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/sports_box_score_manager/logic/gameAccessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[5149473056353498]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -67,14 +64,14 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sample-project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="memory.settings.postsync.last.time.stamp" value="1648700047591" />
-    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
-  <component name="RunManager" selected="Gradle.gameAccessTest.crudTest">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="ScoreActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
       <module name="sports-box-score-manager.app" />
       <option name="DEPLOY" value="true" />
