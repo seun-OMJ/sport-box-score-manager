@@ -11,9 +11,9 @@ For some of our features implemented in iteration 1, the group was not able to i
 This technical debt can be classified as prudent technical debt. The group was aware that the feature was not tested and the group decided to ship it out and test it later on.
 
 #### Technical Debt 2
+For iteration 1, we implemented the UI with the mentality of delivering something quickly. This has resulted into the UI being buggy and needing to be fixed multiple times to be able to display UI elements properly, in several commits (d6c0d7aa85d31bfbf43ac845ce8d7debe817b4fd, ddf0651b4d5f666072008b46e8c61e4bc3208570, 94f48cc87a15212555f5a2b595029d4e918bed0a) it can be seen that the group has tried to fix many bugs with the UI.
 
-
-
+This technical debt can be classified as prudent technical debt. The group was aware that the UI was not properly tested and the group decided to ship it out and test it later on.
 
 ### SOLID
 
