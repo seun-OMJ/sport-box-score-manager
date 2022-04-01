@@ -16,7 +16,7 @@ For iteration 1, we implemented the UI with the mentality of delivering somethin
 This technical debt can be classified as prudent technical debt. The group was aware that the UI was not properly tested and the group decided to ship it out and test it later on.
 
 ### SOLID
-
+Group 9 had very good quality of code and  a SOLID violation was very hard to find. We could only find one Open/Close Principle violation in https://code.cs.umanitoba.ca/winter-2022-a01/group-9/virtualcloset-A01/-/blob/cdce1912f3a5b554d1217896fa95b6c971c0bba5/app/src/main/java/com/example/virtualcloset/presentation/AddClothingActivity.java AddClothingActivity.java as it has many if block which could be refactored into one.
 
 ### Retroperspective
 When the group was working on iteration 1, the group was split onto the presentation, business, and logic groups. However, this has not been working out well and as a group, looking back at iteration 1 we as a group decided to change up the way we work on the project. The group decided to take up and work on a feature individually from the UI elements to testing.
