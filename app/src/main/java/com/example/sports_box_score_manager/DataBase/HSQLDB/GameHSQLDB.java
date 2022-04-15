@@ -27,11 +27,11 @@ public class GameHSQLDB implements GameData {
         final String gameName = rs.getString("name");
         final String p1 = rs.getString("player1");
         final String p2 = rs.getString("player2");
-        final String p3 = rs.getString("player3");
-        final String p4 = rs.getString("player4");
+//        final String p3 = rs.getString("player3");
+//        final String p4 = rs.getString("player4");
 
 
-        return new GameModel(gameID, gameName,p1,p2,p3,p4);
+        return new GameModel(gameID, gameName,p1,p2);
     }
 
     public List<GameModel> getGameSequential() {
@@ -79,13 +79,13 @@ public class GameHSQLDB implements GameData {
     @Override
     public GameModel addGame(GameModel game) {
         try(final Connection c = connection()){
-            final PreparedStatement st = c.prepareStatement("INSERT INTO games VALUES(?, ?, ?, ?, ?, ?)");
+            final PreparedStatement st = c.prepareStatement("INSERT INTO games VALUES(?, ?, ?, ?)");
             st.setInt(1, game.getGameId());
             st.setString(2, game.getGameName());
             st.setString(3,game.getPlayer1Name());
             st.setString(4, game.getPlayer2Name());
-            st.setString(5,game.getPlayer3Name());
-            st.setString(6,game.getPlayer4Name());
+//            st.setString(5,game.getPlayer3Name());
+//            st.setString(6,game.getPlayer4Name());
             st.executeUpdate();
 
         } catch (SQLException e) {
@@ -108,14 +108,14 @@ public class GameHSQLDB implements GameData {
 
     public GameModel updateGame(GameModel game){
         try (final Connection c = connection()) {
-            final PreparedStatement st = c.prepareStatement("UPDATE games SET name = ?,player1 = ?,player2 = ?,player3 = ?,player4 = ? WHERE gameID = ?");
+            final PreparedStatement st = c.prepareStatement("UPDATE games SET name = ?,player1 = ?,player2 = ? WHERE gameID = ?");
 
             st.setString(1, game.getGameName());
             st.setString(2,game.getPlayer1Name());
             st.setString(3, game.getPlayer2Name());
-            st.setString(4,game.getPlayer3Name());
-            st.setString(5,game.getPlayer4Name());
-            st.setInt(6, game.getGameId());
+//            st.setString(4,game.getPlayer3Name());
+//            st.setString(5,game.getPlayer4Name());
+            st.setInt(4, game.getGameId());
             st.executeUpdate();
 
             return game;

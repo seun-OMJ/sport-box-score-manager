@@ -100,14 +100,14 @@ public class ScoreActivity extends AppCompatActivity {
         score2.setText("0");
     }
     public void save(){
-<<<<<<< HEAD
+//<<<<<<< HEAD
         //INSERT INTO tutorials_tbl VALUES (100,'Learn PHP', 'John Poul', NOW());
         GameAccess saved = new GameAccess();
         //(int gameId, String gameName, String player1Name,String player2Name, String player3Name, String player4Name)
         Intent i = getIntent();
-        GameModel game = new GameModel(hashCode(),i.getStringExtra(MainActivity.extraText),i.getStringExtra(PlayerActivity.extraText),i.getStringExtra(PlayerActivity.extraText2),i.getStringExtra(PlayerActivity.extraText3),i.getStringExtra(PlayerActivity.extraText4));
-=======
->>>>>>> 518503ccd3c440f99ef8c7f3c928ecf6f4b5a387
+        GameModel game = new GameModel(hashCode(),i.getStringExtra(MainActivity.extraText),i.getStringExtra(PlayerActivity.extraText),i.getStringExtra(PlayerActivity.extraText2));
+//=======
+//>>>>>>> 518503ccd3c440f99ef8c7f3c928ecf6f4b5a387
         reset();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

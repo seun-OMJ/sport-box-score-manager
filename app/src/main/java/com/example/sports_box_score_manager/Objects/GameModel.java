@@ -5,17 +5,12 @@ public class GameModel {
     private String gameName;
     private String player1Name;
     private String player2Name;
-    private String player3Name;
-    private String player4Name;
     //constructurs
-    public GameModel(int gameId, String gameName, String player1Name,
-                     String player2Name, String player3Name, String player4Name) {
+    public GameModel(int gameId, String gameName, String player1Name, String player2Name) {
         this.gameId = gameId;
         this.gameName = gameName;
         this.player1Name = player1Name;
         this.player2Name = player2Name;
-        this.player3Name = player3Name;
-        this.player4Name = player4Name;
     }
 
     public GameModel(int gameID) {
@@ -55,21 +50,6 @@ public class GameModel {
         this.player2Name = player2Name;
     }
 
-    public String getPlayer3Name() {
-        return player3Name;
-    }
-
-    public void setPlayer3Name(String player3Name) {
-        this.player3Name = player3Name;
-    }
-
-    public String getPlayer4Name() {
-        return player4Name;
-    }
-
-    public void setPlayer4Name(String player4Name) {
-        this.player4Name = player4Name;
-    }
     //toString
 
     @Override
@@ -79,8 +59,6 @@ public class GameModel {
                 ", gameName='" + gameName + '\'' +
                 ", player1Name='" + player1Name + '\'' +
                 ", player2Name='" + player2Name + '\'' +
-                ", player3Name='" + player3Name + '\'' +
-                ", player4Name='" + player4Name + '\'' +
                 '}';
     }
 }
