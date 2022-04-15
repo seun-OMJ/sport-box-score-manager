@@ -16,15 +16,18 @@
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/sports_box_score_manager/logic/gameAccessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/sports_box_score_manager/logic/gameAccessTest.java" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" afterDir="false" />
 >>>>>>> a1b735beabf26c13b3336471827c658c3a4766b4
+>>>>>>> 2ca136862446db58f425b69a1b3172b0a4ea3ef3
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[5149473056353498]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jass\.android\avd\Pixel_XL_API_23.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

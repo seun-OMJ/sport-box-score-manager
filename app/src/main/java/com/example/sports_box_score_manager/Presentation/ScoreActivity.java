@@ -17,10 +17,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class ScoreActivity extends AppCompatActivity {
-            TextView score1,score2,score3,score4, timerText;
-            Button add1,sub1,add2,sub2,add3,sub3,add4,sub4, reset,save, timerStartBtn, timerResetBtn;
-
-    
+            TextView score1,score2, timerText;
+            Button add1,sub1,add2,sub2, reset,save, timerStartBtn, timerResetBtn;
             boolean timerStarted = false;
             Timer timer;
             TimerTask sportTime;
@@ -38,32 +36,19 @@ public class ScoreActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String text = intent.getStringExtra(PlayerActivity.extraText);
         String text2 = intent.getStringExtra(PlayerActivity.extraText2);
-        String text3 = intent.getStringExtra(PlayerActivity.extraText3);
-        String text4 = intent.getStringExtra(PlayerActivity.extraText4);
 
         TextView textView1 = findViewById(R.id.textP1Name);
         TextView textView2 = findViewById(R.id.textP2Name);
-        TextView textView3 = findViewById(R.id.textP3Name);
-        TextView textView4 = findViewById(R.id.textP4Name);
-
         textView1.setText(text);
         textView2.setText(text2);
-        textView3.setText(text3);
-        textView4.setText(text4);
 
         score1 = findViewById(R.id.textView7);
         score2 = findViewById(R.id.textView12);
-        score3= findViewById(R.id.textView9);
-        score4= findViewById(R.id.textView15);
 
         add1 = findViewById(R.id.button12);
         sub1 = findViewById(R.id.button13);
         add2 = findViewById(R.id.button9);
         sub2 = findViewById(R.id.button11);
-        add3 = findViewById(R.id.button2);
-        sub3 = findViewById(R.id.button4);
-        add4 = findViewById(R.id.button5);
-        sub4 = findViewById(R.id.button10);
 
         reset = findViewById(R.id.resetButton);
         save= findViewById(R.id.saveButton);
@@ -93,18 +78,6 @@ public class ScoreActivity extends AppCompatActivity {
                     points.addScore(score2);
             }
         });
-        add3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                points.addScore(score3);
-            }
-        });
-        add4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                points.addScore(score4);
-            }
-        });
 
         sub1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,18 +91,6 @@ public class ScoreActivity extends AppCompatActivity {
                 points.subScore(score2);
             }
         });
-        sub3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                points.subScore(score3);
-            }
-        });
-        sub4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                points.subScore(score4);
-            }
-        });
     }
 
 
@@ -137,15 +98,16 @@ public class ScoreActivity extends AppCompatActivity {
     public void reset(){
         score1.setText("0");
         score2.setText("0");
-        score3.setText("0");
-        score4.setText("0");
     }
     public void save(){
+<<<<<<< HEAD
         //INSERT INTO tutorials_tbl VALUES (100,'Learn PHP', 'John Poul', NOW());
         GameAccess saved = new GameAccess();
         //(int gameId, String gameName, String player1Name,String player2Name, String player3Name, String player4Name)
         Intent i = getIntent();
         GameModel game = new GameModel(hashCode(),i.getStringExtra(MainActivity.extraText),i.getStringExtra(PlayerActivity.extraText),i.getStringExtra(PlayerActivity.extraText2),i.getStringExtra(PlayerActivity.extraText3),i.getStringExtra(PlayerActivity.extraText4));
+=======
+>>>>>>> 518503ccd3c440f99ef8c7f3c928ecf6f4b5a387
         reset();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -199,19 +161,17 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private String timeFormatter(int secs, int mins) {
-        String sec="   "+secs;
-        String min=""+mins;
-        if(mins<10){
-             min="0"+min;
-        }
-        if(secs<10){
-            sec="   0"+secs;
-        }
-        if(mins==0){
-            return sec;
+        String FormattedString="00:00";
+        if(mins==0 && secs<10){
+            FormattedString= "00:0"+secs;
+        }else if(mins==0 && secs>9){
+            FormattedString="00:"+secs;
+        }else if(mins>0 && secs<10){
+            FormattedString="0"+mins+":0"+secs;
         }else{
-            return min+" : "+ sec;
+            FormattedString=mins+":"+secs;
         }
+        return FormattedString;
 
 }
 }
