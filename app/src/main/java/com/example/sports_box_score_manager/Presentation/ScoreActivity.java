@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.sports_box_score_manager.Objects.GameModel;
+import com.example.sports_box_score_manager.logic.GameAccess;
 import com.example.sports_box_score_manager.logic.points;
 import com.example.sports_box_score_manager.R;
 
@@ -140,6 +142,10 @@ public class ScoreActivity extends AppCompatActivity {
     }
     public void save(){
         //INSERT INTO tutorials_tbl VALUES (100,'Learn PHP', 'John Poul', NOW());
+        GameAccess saved = new GameAccess();
+        //(int gameId, String gameName, String player1Name,String player2Name, String player3Name, String player4Name)
+        Intent i = getIntent();
+        GameModel game = new GameModel(hashCode(),i.getStringExtra(MainActivity.extraText),i.getStringExtra(PlayerActivity.extraText),i.getStringExtra(PlayerActivity.extraText2),i.getStringExtra(PlayerActivity.extraText3),i.getStringExtra(PlayerActivity.extraText4));
         reset();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
