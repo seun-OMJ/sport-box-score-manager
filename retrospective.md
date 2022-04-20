@@ -13,7 +13,7 @@ Discussion:
 Due to reduction in the number of team members and less amount of work hours now, We have decided to a) keep only one save game in the app; b) Reduce the number of players to just 2 and fix the layout and c) not add any developers task into the app.
 
 3) Also include a chart (as an image) showing the 2 data points of project velocity from the last two iterations:
-
+Please find the velocity chart at the following l([velocitychart.jpg])ink
 Iteration 1: We decided to complete the first layout and most essential 11 features but we could only complete 7 as we were new as a team and new to the andriod studio.
 
 Iteration 2: Few of our teamates opted out of the course so we only decided to implement 7 features at this time, we only were able to complete 5 features.
