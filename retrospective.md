@@ -14,7 +14,7 @@ Due to reduction in the number of team members and less amount of work hours now
 
 3) Also include a chart (as an image) showing the 2 data points of project velocity from the last two iterations:
 Please find the velocity chart at the following link:
-[](velocitychart.jpg)velocitychart.jpg
+[](https://code.cs.umanitoba.ca/winter-2022-a01/group-10/sport-box-score-manager/-/blob/main/velocitychart.jpg)
 Iteration 1: We decided to complete the first layout and most essential 11 features but we could only complete 7 as we were new as a team and new to the andriod studio.
 
 Iteration 2: Few of our teamates opted out of the course so we only decided to implement 7 features at this time, we only were able to complete 5 features.
