@@ -24,6 +24,9 @@ public class ScoreActivity extends AppCompatActivity {
     TimerTask sportTime;
     Double time = 0.0;
     private GameAccess saved;
+    String text;
+    String text2;
+    String main_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         saved = new GameAccess();
@@ -35,8 +38,9 @@ public class ScoreActivity extends AppCompatActivity {
         timer = new Timer();
 
         Intent intent = getIntent();
-        String text = intent.getStringExtra(PlayerActivity.extraText);
-        String text2 = intent.getStringExtra(PlayerActivity.extraText2);
+        main_text = intent.getStringExtra(PlayerActivity.mainName);
+        text = intent.getStringExtra(PlayerActivity.extraText);
+        text2 = intent.getStringExtra(PlayerActivity.extraText2);
 
         TextView textView1 = findViewById(R.id.textP1Name);
         TextView textView2 = findViewById(R.id.textP2Name);
@@ -102,7 +106,7 @@ public class ScoreActivity extends AppCompatActivity {
         score2.setText("0");
     }
     public void save(){  try{
-        GameModel game = new GameModel(0,"checkname","name1","name2");
+        GameModel game = new GameModel(0,main_text,text,text2);
         game.setScore1(Integer.parseInt((score1.getText().toString())));
         game.setScore2(Integer.parseInt((score2.getText().toString())));
         saved.updateGame(game);

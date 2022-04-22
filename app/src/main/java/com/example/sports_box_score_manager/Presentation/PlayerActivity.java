@@ -14,15 +14,16 @@ import com.example.sports_box_score_manager.R;
 public class PlayerActivity extends AppCompatActivity {
     public static final String extraText = "com.example.sports_box_score_manager.extraText";
     public static final String extraText2 = "com.example.sports_box_score_manager.extraText2";
+    public static String mainName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
         Intent intent = getIntent();
-        String text = intent.getStringExtra(MainActivity.extraText);
+        mainName = intent.getStringExtra(MainActivity.extraText);
         Button button = findViewById(R.id.button);
         TextView text1 = findViewById(R.id.EnterGameName);
-        text1.setText(text);
+        text1.setText(mainName);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,11 +42,12 @@ public class PlayerActivity extends AppCompatActivity {
         }else if(text2.length()==0 | text2.length()>25) {
             edit2.setError("Invalid Input for Player 2");
         }else{
-            nextPage(text1,text2);
+            nextPage(mainName,text1,text2);
         }
     }
-    public void nextPage(String text1,String text2){
+    public void nextPage(String name,String text1,String text2){
         Intent intent = new Intent(this, ScoreActivity.class);
+        intent.putExtra(mainName,name);
         intent.putExtra(extraText,text1);
         intent.putExtra(extraText2,text2);
         startActivity(intent);
