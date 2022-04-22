@@ -5,12 +5,17 @@ public class GameModel {
     private String gameName;
     private String player1Name;
     private String player2Name;
+    private int score1;
+    private int score2;
+
     //constructurs
     public GameModel(int gameId, String gameName, String player1Name, String player2Name) {
         this.gameId = gameId;
         this.gameName = gameName;
         this.player1Name = player1Name;
         this.player2Name = player2Name;
+        this.score1 = 0;
+        this.score2 = 0;
     }
 
     public GameModel(int gameID) {
@@ -48,6 +53,18 @@ public class GameModel {
 
     public void setPlayer2Name(String player2Name) {
         this.player2Name = player2Name;
+    }
+    public void setScore1(int score){
+        this.score1 = score;
+    }
+    public void setScore2(int score){
+        this.score2 = score;
+    }
+    public int getScore1(){
+        return this.score1;
+    }
+    public int getScore2(){
+        return this.score2;
     }
 
     //toString

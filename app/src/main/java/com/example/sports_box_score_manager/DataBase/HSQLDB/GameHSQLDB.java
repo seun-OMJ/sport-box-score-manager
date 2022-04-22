@@ -20,15 +20,13 @@ public class GameHSQLDB implements GameData {
         this.dbpath = dbpath;
     }
     private Connection connection() throws SQLException{
-        return DriverManager.getConnection("jdbc:hsqldb:file:"+dbpath+";shutdown=true","SA","");
+        return DriverManager.getConnection("jdbc:hsqldb:file:"+dbpath+";ifexists=true;shutdown=true","SA","");
     }
     private GameModel fromResultSet(final ResultSet rs) throws SQLException {
         final int gameID = rs.getInt(0);
         final String gameName = rs.getString("name");
         final String p1 = rs.getString("player1");
         final String p2 = rs.getString("player2");
-//        final String p3 = rs.getString("player3");
-//        final String p4 = rs.getString("player4");
 
 
         return new GameModel(gameID, gameName,p1,p2);

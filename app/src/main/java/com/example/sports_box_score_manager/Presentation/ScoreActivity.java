@@ -17,15 +17,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class ScoreActivity extends AppCompatActivity {
-            TextView score1,score2, timerText;
-            Button add1,sub1,add2,sub2, reset,save, timerStartBtn, timerResetBtn;
-            boolean timerStarted = false;
-            Timer timer;
-            TimerTask sportTime;
-            Double time = 0.0;
-
+    TextView score1,score2, timerText;
+    Button add1,sub1,add2,sub2, reset,save, timerStartBtn, timerResetBtn;
+    boolean timerStarted = false;
+    Timer timer;
+    TimerTask sportTime;
+    Double time = 0.0;
+    private GameAccess saved;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        saved = new GameAccess();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
@@ -62,6 +63,7 @@ public class ScoreActivity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 save();
             }
         });
@@ -99,15 +101,15 @@ public class ScoreActivity extends AppCompatActivity {
         score1.setText("0");
         score2.setText("0");
     }
-    public void save(){
-//<<<<<<< HEAD
-        //INSERT INTO tutorials_tbl VALUES (100,'Learn PHP', 'John Poul', NOW());
-        GameAccess saved = new GameAccess();
-        //(int gameId, String gameName, String player1Name,String player2Name, String player3Name, String player4Name)
-        Intent i = getIntent();
-        GameModel game = new GameModel(hashCode(),i.getStringExtra(MainActivity.extraText),i.getStringExtra(PlayerActivity.extraText),i.getStringExtra(PlayerActivity.extraText2));
-//=======
-//>>>>>>> 518503ccd3c440f99ef8c7f3c928ecf6f4b5a387
+    public void save(){  try{
+        GameModel game = new GameModel(0,"checkname","name1","name2");
+        game.setScore1(Integer.parseInt((score1.getText().toString())));
+        game.setScore2(Integer.parseInt((score2.getText().toString())));
+        saved.updateGame(game);
+    }catch(final Exception e){
+        Messages.fatalError(this, e.getMessage());
+        System.out.println(e.getMessage());
+    }
         reset();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

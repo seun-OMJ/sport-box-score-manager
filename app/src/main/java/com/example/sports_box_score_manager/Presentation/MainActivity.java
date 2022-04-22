@@ -2,7 +2,9 @@ package com.example.sports_box_score_manager.Presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,6 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.sports_box_score_manager.R;
+import com.example.sports_box_score_manager.application.Main;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+            copyDatabaseToDevice();
+
         // Click listener for Save And Conitnue button
         Button button = findViewById(R.id.button3);
         button.setOnClickListener(new OnClickListener() {
@@ -28,29 +38,14 @@ public class MainActivity extends AppCompatActivity {
         });
         // Click listeners for Previous Game buttons
         Button PreviousGame1 = (Button) findViewById(R.id.button6);
-        Button PreviousGame2 = (Button) findViewById(R.id.button7);
-        Button PreviousGame3 = (Button) findViewById(R.id.button8);
         PreviousGame1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text1="Previous Game 1";
+                String text1="Previous Game";
                 nextPage(text1);
             }
         });
-        PreviousGame2.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String text2="Previous Game 2";
-                nextPage(text2);
-            }
-        });
-        PreviousGame3.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String text3="Previous Game 3";
-                nextPage(text3);
-            }
-        });
+
     }
 
     public void openActivity3(){
@@ -58,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         String text = edit1.getText().toString();
         Intent intent = new Intent(this, PlayerActivity.class);
-        //intent.putExtra(extraText, text);
 
         if(text.length()==0 | text.length()>25){
             edit1.setError("Invalid Input");
@@ -73,31 +67,63 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public static class Game {
-        private String gameName;
-        private String playerName;
-        private int score;
+    private void copyDatabaseToDevice() {
+        final String DB_PATH = "db";
 
-        public Game(String gameName, String playerName) {
-            this.gameName = gameName;
-            this.playerName = playerName;
-            score = 0;
+        String[] assetNames;
+        Context context = getApplicationContext();
+        File dataDirectory = context.getDir(DB_PATH, Context.MODE_PRIVATE);
+        AssetManager assetManager = getAssets();
+
+        try {
+
+            assetNames = assetManager.list(DB_PATH);
+            for (int i = 0; i < assetNames.length; i++) {
+                assetNames[i] = DB_PATH + "/" + assetNames[i];
+            }
+
+            copyAssetsToDirectory(assetNames, dataDirectory);
+
+            Main.setDbName(dataDirectory.toString() + "/" + Main.getDbName());
+            System.out.println(Main.getDbName());
+        } catch (final IOException ioe) {
+            Messages.warning(this, "Unable to access application data: " + ioe.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
 
-        public String getGameName() {
-            return gameName;
-        }
+    public void copyAssetsToDirectory(String[] assets, File directory) throws IOException {
+        AssetManager assetManager = getAssets();
 
-        public String getPlayerName() {
-            return playerName;
-        }
+        for (String asset : assets) {
+            String[] components = asset.split("/");
+            String copyPath = directory.toString() + "/" + components[components.length - 1];
 
-        public void setScore(int score) {
-            this.score = score;
-        }
+            char[] buffer = new char[1024];
+            int count;
 
-        public int getScore() {
-            return score;
+            File outFile = new File(copyPath);
+
+            if (!outFile.exists()) {
+                InputStreamReader in = new InputStreamReader(assetManager.open(asset));
+                FileWriter out = new FileWriter(outFile);
+
+                count = in.read(buffer);
+                while (count != -1) {
+                    out.write(buffer, 0, count);
+                    count = in.read(buffer);
+                }
+
+                out.close();
+                in.close();
+            }
         }
     }
 }
+
+
+
+
+
+
