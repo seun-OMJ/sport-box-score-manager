@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String text1="Previous Game";
-                nextPage(text1);
+                nextPage2(text1);
             }
         });
 
@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void nextPage(String text){
         Intent intent = new Intent(this, PlayerActivity.class);
+        intent.putExtra(extraText, text);
+        startActivity(intent);
+    }
+    public void nextPage2(String text){
+        Intent intent = new Intent(this, HistoryActivity.class);
         intent.putExtra(extraText, text);
         startActivity(intent);
     }

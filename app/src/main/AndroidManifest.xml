@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sportsboxscoremanager">
         <activity
+            android:name=".Presentation.HistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".Presentation.ScoreActivity"
             android:exported="false"
             android:label="@string/title_activity_score"
@@ -18,7 +21,7 @@
             android:name=".Presentation.PlayerActivity"
             android:exported="false"
             android:label="@string/title_activity_player"
-            android:theme="@style/Theme.Sportsboxscoremanager.NoActionBar"  />
+            android:theme="@style/Theme.Sportsboxscoremanager.NoActionBar" />
         <activity
             android:name=".Presentation.MainActivity"
             android:exported="true">

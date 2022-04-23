@@ -9,13 +9,13 @@ public class GameModel {
     private int score2;
 
     //constructurs
-    public GameModel(int gameId, String gameName, String player1Name, String player2Name) {
+    public GameModel(int gameId, String gameName, String player1Name, String player2Name, int score1, int score2) {
         this.gameId = gameId;
         this.gameName = gameName;
         this.player1Name = player1Name;
         this.player2Name = player2Name;
-        this.score1 = 0;
-        this.score2 = 0;
+        this.score1 = score1;
+        this.score2 = score2;
     }
 
     public GameModel(int gameID) {

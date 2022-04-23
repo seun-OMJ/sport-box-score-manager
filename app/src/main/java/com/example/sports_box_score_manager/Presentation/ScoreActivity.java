@@ -106,9 +106,7 @@ public class ScoreActivity extends AppCompatActivity {
         score2.setText("0");
     }
     public void save(){  try{
-        GameModel game = new GameModel(0,main_text,text,text2);
-        game.setScore1(Integer.parseInt((score1.getText().toString())));
-        game.setScore2(Integer.parseInt((score2.getText().toString())));
+        GameModel game = new GameModel(0,main_text,text,text2,Integer.parseInt((score1.getText().toString())),Integer.parseInt((score2.getText().toString())));
         saved.updateGame(game);
     }catch(final Exception e){
         Messages.fatalError(this, e.getMessage());

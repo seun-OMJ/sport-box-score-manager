@@ -37,14 +37,15 @@ public class GameAccess {
             games = gameData.getGameSequential();
             currentGame = 0;
         }
-        if (currentGame < games.size()) {
-            gameModel = games.get(currentGame);
-            currentGame++;
-        } else {
-            games = null;
-            gameModel = null;
-            currentGame = 0;
-        }
+    //    if (currentGame < games.size()) {
+            gameModel = games.get(0);
+   //         currentGame++;
+   //     }
+//        else {
+//            games = null;
+//            gameModel = null;
+//            currentGame = 0;
+//        }
         return gameModel;
     }
 
