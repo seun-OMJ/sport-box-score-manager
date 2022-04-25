@@ -14,9 +14,9 @@ There will also be a generic score box so that users can design how they want to
 Unlike other bookkeeping apps, our apps will help users keep the games and scores more organised by being game specific. 
 The benefit of using our application over others is that with ours, it is built to specialize in what it does so there are features that make it best suited towards sports and score keeping activities such as being able to keep scores over multiple events, being able to create add and edit teams,being able to pick desired sport Since different sports have different Scoring systems. Users will also be able to start and stop the timers for sports that have the feature implemented.
 
-### Success Criteria
 This application will be considered successful based on the following criterias:
 
+### Success Criteria
 - Ease of use and intended purpose
 - Strong user base
 - Improve the users' game
