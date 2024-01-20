@@ -16,3 +16,4 @@ public class points {
         text.setText(String.valueOf(score));
     }
 }
+
